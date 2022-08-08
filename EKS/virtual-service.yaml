@@ -1,0 +1,11 @@
+apiVersion: appmesh.k8s.aws/v1beta2
+kind: VirtualService
+metadata:
+  name: knol-service
+  namespace: mesh-workload
+spec:
+  awsName: knol-service-virtual-service
+  provider:
+    virtualRouter:
+      virtualRouterRef:
+        name: knol-service
